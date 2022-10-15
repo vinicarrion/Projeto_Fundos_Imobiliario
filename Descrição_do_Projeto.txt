@@ -1,0 +1,15 @@
+O software tem o intuito de mostrar informações do mercado de fundos imobiliários, 
+com a ideia  ajudar o cliente a ter melhores análises e visualização sobre as costas do mercado de Fundos imobiliários, 
+o sistema mostrará a seguintes informações: 
+
+código do Fii(fundo imobiliário);
+ Área de atuação;
+ Tipo;
+ Preço da cota;
+ Distribuição de dividendos;
+ Taxa de administração;
+
+o Sistema que será desenvolvido, guardará as informações outrora citadas e em banco de dados SQL 
+que retorna as informações do FII (selecionado) listados, com um front mais limpo que 
+os habituais plataformas que mostram grandes números de informações embaralhadas em uma tela apertada e 
+lotada de anúncios que atrapalham a experiência do usuário, nosso projeto terá melhor navegação por não ter esse defeitos.
