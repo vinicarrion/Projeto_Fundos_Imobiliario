@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj": {}
+    "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj": {
+    "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
+        "projectUniqueName": "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
         "projectName": "Fundos_Imboliarios",
-        "projectPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
+        "projectPath": "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
         "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\obj\\",
+        "outputPath": "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,10 +57,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.5, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.31, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",

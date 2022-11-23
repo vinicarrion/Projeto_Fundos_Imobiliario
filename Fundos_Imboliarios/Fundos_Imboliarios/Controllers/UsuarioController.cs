@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Fundos_Imboliarios.Data;
 using Fundos_Imboliarios.Model;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using Ubiety.Dns.Core;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fundos_Imboliarios.Controllers
 {

@@ -16,7 +16,7 @@ namespace Fundos_Imboliarios.Migrations.Fundo_Imobiliario
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("Fundos_Imboliarios.Model.Fundos_Imboliario", b =>
+            modelBuilder.Entity("Fundos_Imboliarios.Model.Fundo_Imboliario", b =>
                 {
                     b.Property<int>("Codigo_Fundos")
                         .ValueGeneratedOnAdd()

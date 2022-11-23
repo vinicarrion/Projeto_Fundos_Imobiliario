@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fundos_Imboliarios.Model
 {
@@ -12,6 +12,7 @@ namespace Fundos_Imboliarios.Model
         [Required]
         public String FIIS { get; set; }
 
+        [ForeignKey("Usuario")]
         public int Id_usuario { get; set; }
     }
 }

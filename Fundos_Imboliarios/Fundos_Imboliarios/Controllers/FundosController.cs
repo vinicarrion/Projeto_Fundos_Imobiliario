@@ -19,23 +19,26 @@ namespace Fundos_Imboliarios.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddFundos_Imboliarios([FromBody] Fundos_Imboliario fundo)
+        public IActionResult AddFundos([FromBody] Fundo fundo)
         {
-            _context.Fundos_Imobiliarios.Add(fundo);
+            _context.Fundos.Add(fundo);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetCardById), new { Id = fundo.Codigo_Fundos }, fundo);
         }
 
         [HttpGet]
-        
+        public IEnumerable<Fundo> GetCards()
+        {
+            return _context.Fundos;
+        }
 
         [HttpGet("{id}")]
         public IActionResult GetCardById(int id)
         {
-            Fundos_Imboliario fundos = _context.Fundos_Imobiliarios.FirstOrDefault(fundos => fundos.Codigo_Fundos == id);
-            if (fundos != null)
+            Fundo fundo = _context.Fundos.FirstOrDefault(fundo => fundo.Codigo_Fundos == id);
+            if (fundo != null)
             {
-                return Ok(fundos);
+                return Ok(fundo);
             }
             return NotFound();
         }

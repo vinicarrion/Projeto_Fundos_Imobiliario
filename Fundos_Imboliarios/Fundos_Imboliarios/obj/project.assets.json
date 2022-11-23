@@ -33,15 +33,32 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Google.Protobuf/3.19.4": {
+      "BouncyCastle.NetCore/1.8.5": {
         "type": "package",
         "compile": {
-          "lib/net5.0/Google.Protobuf.dll": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Google.Protobuf/3.14.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Google.Protobuf.dll": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -59,10 +76,10 @@
           }
         }
       },
-      "K4os.Compression.LZ4/1.2.6": {
+      "K4os.Compression.LZ4/1.1.11": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.4"
+          "System.Memory": "4.5.3"
         },
         "compile": {
           "lib/netstandard2.0/K4os.Compression.LZ4.dll": {
@@ -75,19 +92,19 @@
           }
         }
       },
-      "K4os.Compression.LZ4.Streams/1.2.6": {
+      "K4os.Compression.LZ4.Streams/1.1.11": {
         "type": "package",
         "dependencies": {
-          "K4os.Compression.LZ4": "1.2.6",
+          "K4os.Compression.LZ4": "1.1.11",
           "K4os.Hash.xxHash": "1.0.6"
         },
         "compile": {
-          "lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll": {
+          "lib/netstandard2.0/K4os.Compression.LZ4.Streams.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll": {
+          "lib/netstandard2.0/K4os.Compression.LZ4.Streams.dll": {
             "related": ".xml"
           }
         }
@@ -642,15 +659,16 @@
           }
         }
       },
-      "MySql.Data/8.0.31": {
+      "MySql.Data/8.0.24": {
         "type": "package",
         "dependencies": {
-          "Google.Protobuf": "3.19.4",
-          "K4os.Compression.LZ4.Streams": "1.2.6",
-          "Portable.BouncyCastle": "1.9.0",
+          "BouncyCastle.NetCore": "1.8.5",
+          "Google.Protobuf": "3.14.0",
+          "K4os.Compression.LZ4": "1.1.11",
+          "K4os.Compression.LZ4.Streams": "1.1.11",
+          "K4os.Hash.xxHash": "1.0.6",
           "System.Buffers": "4.5.1",
           "System.Configuration.ConfigurationManager": "4.4.1",
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
           "System.Security.Permissions": "4.7.0",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
@@ -658,13 +676,15 @@
           "lib/net5.0/MySql.Data.dll": {
             "related": ".xml"
           },
-          "lib/net5.0/ZstdNet.dll": {}
+          "lib/net5.0/Ubiety.Dns.Core.dll": {},
+          "lib/net5.0/Zstandard.Net.dll": {}
         },
         "runtime": {
           "lib/net5.0/MySql.Data.dll": {
             "related": ".xml"
           },
-          "lib/net5.0/ZstdNet.dll": {}
+          "lib/net5.0/Ubiety.Dns.Core.dll": {},
+          "lib/net5.0/Zstandard.Net.dll": {}
         }
       },
       "MySql.EntityFrameworkCore/5.0.3": {
@@ -721,19 +741,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Portable.BouncyCastle/1.9.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
           }
         }
@@ -1255,7 +1262,7 @@
           "lib/netstandard1.6/System.Linq.Expressions.dll": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -1524,10 +1531,10 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
         },
@@ -2053,21 +2060,43 @@
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "Google.Protobuf/3.19.4": {
-      "sha512": "fd07/ykL4O4FhqrZIELm5lmiyOHfdPg9+o+hWr6tcfRdS7tHXnImg/2wtogLzlW2eEmr0J7j6ZrZvaWOLiJbxQ==",
+    "BouncyCastle.NetCore/1.8.5": {
+      "sha512": "6uxsQw2UXrt82VQAWC2td3oBSJjUZ3P4u4DliagB8wf67KsU53V8sW9xwdF+IwZOOZFR0TCZuv/YKZ2BlrfAag==",
       "type": "package",
-      "path": "google.protobuf/3.19.4",
+      "path": "bouncycastle.netcore/1.8.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.19.4.nupkg.sha512",
+        "bouncycastle.netcore.1.8.5.nupkg.sha512",
+        "bouncycastle.netcore.nuspec",
+        "lib/Mono/BouncyCastle.Crypto.dll",
+        "lib/Mono/BouncyCastle.Crypto.xml",
+        "lib/MonoAndroid/BouncyCastle.Crypto.dll",
+        "lib/MonoAndroid/BouncyCastle.Crypto.xml",
+        "lib/MonoMac/BouncyCastle.Crypto.dll",
+        "lib/MonoMac/BouncyCastle.Crypto.xml",
+        "lib/MonoTouch/BouncyCastle.Crypto.dll",
+        "lib/MonoTouch/BouncyCastle.Crypto.xml",
+        "lib/net20/BouncyCastle.Crypto.dll",
+        "lib/net20/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "lib/xamarinios/BouncyCastle.Crypto.dll",
+        "lib/xamarinios/BouncyCastle.Crypto.xml"
+      ]
+    },
+    "Google.Protobuf/3.14.0": {
+      "sha512": "9AkodyGNmLI+wJJPbwpWLmh4BMHoXDQ9+8qvDPhQQi/BNsleqKMBn3OlyLwC6CALwan2kc5+Cenb8fJSITX3nQ==",
+      "type": "package",
+      "path": "google.protobuf/3.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.14.0.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
         "lib/net45/Google.Protobuf.xml",
-        "lib/net5.0/Google.Protobuf.dll",
-        "lib/net5.0/Google.Protobuf.pdb",
-        "lib/net5.0/Google.Protobuf.xml",
         "lib/netstandard1.1/Google.Protobuf.dll",
         "lib/netstandard1.1/Google.Protobuf.pdb",
         "lib/netstandard1.1/Google.Protobuf.xml",
@@ -2092,14 +2121,14 @@
         "logo.png"
       ]
     },
-    "K4os.Compression.LZ4/1.2.6": {
-      "sha512": "4EN8EE6bZG2U8dFfeqn+Om3UNajK3cPYHvyQROCFm4jNFVLuRB7Nl5bDkjBSAjfctS6konm+ay3u5RafBzltDA==",
+    "K4os.Compression.LZ4/1.1.11": {
+      "sha512": "RNvJw0UGkedPhCqVBNIogtfQebY+bQt0PN7xDbVe5LWLra0ZEqPfjPSl7iStj3rgDnkqkkTTpm+vCX3hU1qKmA==",
       "type": "package",
-      "path": "k4os.compression.lz4/1.2.6",
+      "path": "k4os.compression.lz4/1.1.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "k4os.compression.lz4.1.2.6.nupkg.sha512",
+        "k4os.compression.lz4.1.1.11.nupkg.sha512",
         "k4os.compression.lz4.nuspec",
         "lib/net45/K4os.Compression.LZ4.dll",
         "lib/net45/K4os.Compression.LZ4.xml",
@@ -2111,14 +2140,14 @@
         "lib/netstandard2.0/K4os.Compression.LZ4.xml"
       ]
     },
-    "K4os.Compression.LZ4.Streams/1.2.6": {
-      "sha512": "5KMcNFRHeRrnJ9c8k5fZcfAJJEY0FndMiDiHIYa35Mx5KCMkeSNo/PEXu7YmtCoVczJagx+Vt7J/F+//S1PcJQ==",
+    "K4os.Compression.LZ4.Streams/1.1.11": {
+      "sha512": "x+BidXriYsNP4HNTHKx+5cVQguHHwbfs6nM79fDHOCOrcNwnaBms4dwzAV/ZALmKsNKcHmY74PeUZiCC4qLKwQ==",
       "type": "package",
-      "path": "k4os.compression.lz4.streams/1.2.6",
+      "path": "k4os.compression.lz4.streams/1.1.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
+        "k4os.compression.lz4.streams.1.1.11.nupkg.sha512",
         "k4os.compression.lz4.streams.nuspec",
         "lib/net45/K4os.Compression.LZ4.Streams.dll",
         "lib/net45/K4os.Compression.LZ4.Streams.xml",
@@ -2127,9 +2156,7 @@
         "lib/netstandard1.6/K4os.Compression.LZ4.Streams.dll",
         "lib/netstandard1.6/K4os.Compression.LZ4.Streams.xml",
         "lib/netstandard2.0/K4os.Compression.LZ4.Streams.dll",
-        "lib/netstandard2.0/K4os.Compression.LZ4.Streams.xml",
-        "lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll",
-        "lib/netstandard2.1/K4os.Compression.LZ4.Streams.xml"
+        "lib/netstandard2.0/K4os.Compression.LZ4.Streams.xml"
       ]
     },
     "K4os.Hash.xxHash/1.0.6": {
@@ -2897,35 +2924,34 @@
         "version.txt"
       ]
     },
-    "MySql.Data/8.0.31": {
-      "sha512": "ZVcctmag6cX0DtDxWh3fhBlSdZfGHKIUIodl7QtjZKupSgbCT0X+bO1Faw/NfUR2VfoxB/L9WzLfeCvki65qVg==",
+    "MySql.Data/8.0.24": {
+      "sha512": "6WdIHP1w8XZRo0rxihmiToJUSLQaNgPKbowspGDulIKlkk/Oh1JCsX3nYX9MtreoUFa01QGfOS4qOqFpOC+ePQ==",
       "type": "package",
-      "path": "mysql.data/8.0.31",
+      "path": "mysql.data/8.0.24",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net452/MySql.Data.dll",
         "lib/net452/MySql.Data.xml",
-        "lib/net452/ZstdNet.dll",
+        "lib/net452/Ubiety.Dns.Core.dll",
+        "lib/net452/Zstandard.Net.dll",
         "lib/net48/MySql.Data.dll",
         "lib/net48/MySql.Data.xml",
-        "lib/net48/ZstdNet.dll",
+        "lib/net48/Ubiety.Dns.Core.dll",
+        "lib/net48/Zstandard.Net.dll",
         "lib/net5.0/MySql.Data.dll",
         "lib/net5.0/MySql.Data.xml",
-        "lib/net5.0/ZstdNet.dll",
-        "lib/net6.0/MySql.Data.dll",
-        "lib/net6.0/MySql.Data.xml",
-        "lib/net6.0/ZstdNet.dll",
-        "lib/net7.0/MySql.Data.dll",
-        "lib/net7.0/MySql.Data.xml",
-        "lib/net7.0/ZstdNet.dll",
+        "lib/net5.0/Ubiety.Dns.Core.dll",
+        "lib/net5.0/Zstandard.Net.dll",
         "lib/netstandard2.0/MySql.Data.dll",
         "lib/netstandard2.0/MySql.Data.xml",
-        "lib/netstandard2.0/ZstdNet.dll",
+        "lib/netstandard2.0/Ubiety.Dns.Core.dll",
+        "lib/netstandard2.0/Zstandard.Net.dll",
         "lib/netstandard2.1/MySql.Data.dll",
         "lib/netstandard2.1/MySql.Data.xml",
-        "lib/netstandard2.1/ZstdNet.dll",
-        "mysql.data.8.0.31.nupkg.sha512",
+        "lib/netstandard2.1/Ubiety.Dns.Core.dll",
+        "lib/netstandard2.1/Zstandard.Net.dll",
+        "mysql.data.8.0.24.nupkg.sha512",
         "mysql.data.nuspec"
       ]
     },
@@ -2967,21 +2993,6 @@
         "newtonsoft.json.10.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
-      ]
-    },
-    "Portable.BouncyCastle/1.9.0": {
-      "sha512": "eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
-      "type": "package",
-      "path": "portable.bouncycastle/1.9.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/BouncyCastle.Crypto.dll",
-        "lib/net40/BouncyCastle.Crypto.xml",
-        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
-        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.9.0.nupkg.sha512",
-        "portable.bouncycastle.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -4402,24 +4413,22 @@
         "system.linq.expressions.nuspec"
       ]
     },
-    "System.Memory/4.5.4": {
-      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
-      "path": "system.memory/4.5.4",
+      "path": "system.memory/4.5.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Memory.dll",
-        "lib/net461/System.Memory.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.4.5.3.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5224,33 +5233,26 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
-      "sha512": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -6687,7 +6689,6 @@
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
-      "MySql.Data >= 8.0.31",
       "MySql.EntityFrameworkCore >= 5.0.3",
       "Swashbuckle.AspNetCore >= 6.2.2"
     ]
@@ -6698,11 +6699,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
+      "projectUniqueName": "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
       "projectName": "Fundos_Imboliarios",
-      "projectPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
+      "projectPath": "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios.csproj",
       "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\Projeto_Fundos\\Fundos_Imboliarios\\Fundos_Imboliarios\\Fundos_Imboliarios\\obj\\",
+      "outputPath": "C:\\Users\\vinic\\OneDrive\\Documentos\\GitHub\\Projeto_Fundos_Imobiliario\\Fundos_Imboliarios\\Fundos_Imboliarios\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6748,10 +6749,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.5, )"
-          },
-          "MySql.Data": {
-            "target": "Package",
-            "version": "[8.0.31, )"
           },
           "MySql.EntityFrameworkCore": {
             "target": "Package",

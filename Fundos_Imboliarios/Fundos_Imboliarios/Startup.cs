@@ -30,6 +30,10 @@ namespace Fundos_Imboliarios
         {
             services.AddDbContext<UsuarioContext>(options => options.UseMySQL(Configuration.GetConnectionString("FundosConnection")));
             services.AddControllers();
+            services.AddDbContext<CarteiraContext>(options => options.UseMySQL(Configuration.GetConnectionString("FundosConnection")));
+            services.AddControllers();
+            services.AddDbContext<Fundo_ImobiliarioContext>(options => options.UseMySQL(Configuration.GetConnectionString("FundosConnection")));
+            services.AddControllers();
 
         }
 

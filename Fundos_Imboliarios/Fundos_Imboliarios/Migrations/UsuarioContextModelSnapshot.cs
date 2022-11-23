@@ -16,7 +16,7 @@ namespace Fundos_Imboliarios.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("Fundos_Imboliarios.Model.Usuario", b =>
+            modelBuilder.Entity("Usuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

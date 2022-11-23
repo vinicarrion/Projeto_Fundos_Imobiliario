@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fundos_Imboliarios.Migrations.Carteira
 {
     [DbContext(typeof(CarteiraContext))]
-    [Migration("20221122225743_createDatabase")]
+    [Migration("20221123154012_createDatabase")]
     partial class createDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
