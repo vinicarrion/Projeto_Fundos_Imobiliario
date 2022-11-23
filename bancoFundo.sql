@@ -1,7 +1,7 @@
 use fundao;
 
-create table tb_usuario(
-id_usuario integer auto_increment primary key,
+create table usuarios(
+id integer auto_increment primary key,
 nome varchar(120) not null,
 cpf varchar(11) not null,
 endereco varchar(110) not null,
